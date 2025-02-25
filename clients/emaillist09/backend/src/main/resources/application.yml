@@ -11,7 +11,7 @@ spring:
 # profile: common
 spring:
    mvc:
-      static-path-pattern: /assets/**
+      static-path-pattern: /assets/** #main.js 다운로드를 위해
    web:
       resources:
          static-locations: classpath:/assets/

@@ -24,9 +24,11 @@ public class MySiteApplication {
     @Bean
     TomcatServletWebServerFactory servletContainer() {
 		return new TomcatServletWebServerFactory() {
+			// TOMCAT을 커스터마이징한다.
 			@Override
 			protected void customizeConnector(Connector connector) {
 				super.customizeConnector(connector);
+				//DELETE에는 BODY를 붙일 수 없지만, 붙일 수 있도록 변경
 				connector.setParseBodyMethods("POST,PUT,DELETE");
 			}
 		};

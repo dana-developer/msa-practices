@@ -19,7 +19,7 @@
     </properties>
 
     <dependencies>
-        <!-- springboot actuator -->
+        <!-- springboot actuator --> <!-- 서버의 상태 체크 모니터링 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>

@@ -37,7 +37,7 @@ eureka:
       hostname: localhost
    server:
       enableSelfPreservation: false
-      waitTimeInMsWhenSyncEmpty: 5        
+      waitTimeInMsWhenSyncEmpty: 5
    client:
       fetchRegistry: false
       registerWithEureka: false
