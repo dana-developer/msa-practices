@@ -1,23 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
         <version>3.4.3</version>
 		<relativePath />
 	</parent>
-		
+
 	<groupId>com.poscodx.msa</groupId>
-	<artifactId>service-gateway-server</artifactId>
+	<artifactId>service-config-server</artifactId>
 
 	<properties>
 		<java.version>21</java.version>
         <spring-cloud.version>2024.0.0</spring-cloud.version>
 	</properties>
-	
+
 	<dependencies>
         <!-- springboot actuator -->
         <dependency>
@@ -31,28 +31,10 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
-        <!-- spring cloud discovery: nextflix eureka client -->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-        
-        <!-- spring cloud config client -->
-	    <dependency>
-	        <groupId>org.springframework.cloud</groupId>
-	        <artifactId>spring-cloud-starter-config</artifactId>
-	    </dependency>
-
-		<!--spring cloud gateway -->
+		<!-- spring cloud config server -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
-		</dependency>
-
-		<!-- tomcat starter -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
  		<!-- springboot starter for testing -->
@@ -61,7 +43,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
 
 	<dependencyManagement>
@@ -77,8 +58,7 @@
 	</dependencyManagement>
 
 	<build>
-		<finalName>service-gateway-server</finalName>
-		
+		<finalName>service-config-server</finalName>
 		<plugins>
 
 			<!-- springboot maven plugin -->        
@@ -121,7 +101,8 @@
                     </execution>
                 </executions>
             </plugin>
-            		
-		</plugins>		
-	</build>		
+            
+		</plugins>
+	</build>
+
 </project>
